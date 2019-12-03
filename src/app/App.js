@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import HomePage from './HomePage'
 import AboutPage from './AboutPage'
 import AuthorsPage from './AuthorsPage'
+import SinglePostPage from './SinglePostPage'
 import { Route, Switch } from 'react-router-dom'
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <div className="col-10">
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/post" component={SinglePostPage} />
             <Route exact path="/authors" component={AuthorsPage} />
             <Route exact path="/about" component={AboutPage} />
           </Switch>
