@@ -12,7 +12,7 @@ const HomePage = (props) => {
                 {props.posts.map(element => {
                     let link = "/post/" + element.id
                     return (
-                        <div>
+                        <div key={element.id.toString()}>
                             <Link to={link}>{element.title[0].toUpperCase() + element.title.slice(1)}</Link>
                             <p> {element.body}</p>
                             <hr />

@@ -9,6 +9,7 @@ import SingleAuthorPage from './SingleAuthorPage'
 import { Route, Switch } from 'react-router-dom'
 import { getPostData } from '../services/postServices'
 import Loader from '../components/Loader'
+import CreatePosts from './CreatePosts'
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +49,8 @@ class App extends React.Component {
               <Route exact path="/post/:id" component={SinglePostPage} />
               <Route exact path="/authors" component={AuthorsPage} />
               <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/author/:userid" component={SingleAuthorPage} />
+              <Route exact path="/posts/new" component={CreatePosts} />
+              <Route exact path="/author/:userId" component={SingleAuthorPage} />
             </Switch>
           </div>
           <div className="col-1"></div>

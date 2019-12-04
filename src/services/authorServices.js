@@ -5,9 +5,10 @@ const getAuthorData = (query) => {
 }
 
 const getAuthorPosts = (query) => {
-    return fetch("https://jsonplaceholder.typicode.com/posts/" + query)
+    return fetch("https://jsonplaceholder.typicode.com/posts/?userId=" + query)
         .then(result => result.json())
 
 }
+
 
 export { getAuthorData, getAuthorPosts };
