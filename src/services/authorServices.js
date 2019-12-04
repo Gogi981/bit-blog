@@ -5,7 +5,7 @@ const getAuthorData = (query) => {
 }
 
 const getAuthorPosts = (query) => {
-    return fetch("https://jsonplaceholder.typicode.com/users/" + query)
+    return fetch("https://jsonplaceholder.typicode.com/posts/" + query)
         .then(result => result.json())
 
 }
